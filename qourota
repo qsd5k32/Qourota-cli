@@ -1,0 +1,16 @@
+#! /usr/bin/env php
+<?php
+
+
+$files = scandir('/var/www/CLI/Cli/');
+
+
+foreach ($files as $file):
+
+    if(strlen($file) > 5):
+
+        require_once "/var/www/CLI/Cli/$file";
+
+    endif;
+
+endforeach; //autoload oui
